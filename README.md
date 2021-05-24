@@ -14,11 +14,22 @@
 
 # Discover页面
 
+- TabBar样式
+  - 使用awesome_tab_bar为容器，每一个page都嵌套了一个horizontal_gallery，而gallery的child为book_card
+- You might like样式
+  - 使用awesome_recommend_gallery为载体，这个组件其实就是将普通的ListView加了一个分隔线, 而每个child是一个recommend_card
+
+
+
 <img src="/imgShow/discover.jpg" alt="Discover" style="zoom:33%;" />
 
 
 
 # Search页面
+
+- 布局相对简单，Search页面代码未变动，请自行查看 pages/search
+
+
 
 <img src="/imgShow/search.jpg" alt="search" style="zoom:33%;" />
 
@@ -26,11 +37,15 @@
 
 # Favorite页面
 
+- 布局简单， 只用到了一个builder_grid_view + book_card的组合
+
 <img src="/imgShow/favorite.jpg" alt="favorite" style="zoom:33%;" />
 
 
 
 # BookDescription页面
+
+- 代码被保留到pages/book_description中，在view页面查看
 
 <img src="/imgShow/detail.jpg" alt="description" style="zoom:33%;" />
 
