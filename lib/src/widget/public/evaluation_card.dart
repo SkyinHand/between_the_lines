@@ -10,7 +10,7 @@ import 'normal_divider.dart';
 
 class EvaluationCard extends StatelessWidget {
 
-  EvaluationCard({required this.evaluationData, this.height});
+  EvaluationCard({required this.evaluationData, this.height, this.backgroundColor, this.titleColor, this.subtitleColor});
 
   /// 数据列表
   final List<EvaluationIntroduction> evaluationData;
@@ -18,6 +18,14 @@ class EvaluationCard extends StatelessWidget {
   /// 高度
   final double? height;
 
+  /// 背景颜色
+  final Color? backgroundColor;
+
+  /// 标题字体颜色
+  final Color? titleColor;
+
+  /// 子标题字体颜色
+  final Color? subtitleColor;
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +40,7 @@ class EvaluationCard extends StatelessWidget {
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(StyleKits.px(15.0))
             ),
-            color: Color.fromRGBO(250, 250, 250, 1.00),
+            color: this.backgroundColor ?? Color.fromRGBO(250, 250, 250, 1.00),
             child: ListView.separated(
               scrollDirection: Axis.horizontal,
               itemCount: this.evaluationData.length,
@@ -48,7 +56,7 @@ class EvaluationCard extends StatelessWidget {
                           style: TextStyle(
                               fontSize: StyleKits.px(14.5),
                               fontWeight: FontWeight.bold,
-                              color: Colors.black
+                              color: this.titleColor ?? Colors.black
                           ),
                           maxLines: 1,
                           overflow: TextOverflow.ellipsis,
@@ -59,7 +67,7 @@ class EvaluationCard extends StatelessWidget {
                           style: TextStyle(
                               fontSize: StyleKits.px(10.5),
                               fontWeight: FontWeight.bold,
-                              color: Color.fromRGBO(196, 196, 196, 1.00),
+                              color: this.subtitleColor ?? Color.fromRGBO(196, 196, 196, 1.00),
                           ),
                           maxLines: 1,
                           overflow: TextOverflow.ellipsis,

@@ -12,7 +12,6 @@ class FavoritePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  ListView(
-      padding: EdgeInsets.zero,
       children: [
         PageHeaderTip(
           title: 'Favorite',

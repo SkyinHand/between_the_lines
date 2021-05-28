@@ -61,7 +61,7 @@ class HomePage extends StatelessWidget {
     }
 
     return ListView(
-      padding: EdgeInsets.zero,
+      // padding: EdgeInsets.only(top: MediaQuery.of(context).padding.top),
       children: [
         PageHeaderTip(
           title: 'Discover',

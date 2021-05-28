@@ -11,7 +11,9 @@ void main() => runApp(MainClass());
 class MainClass extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    SystemChrome.setEnabledSystemUIOverlays([]);
+    SystemChrome.setSystemUIOverlayStyle(
+        SystemUiOverlayStyle(statusBarColor: Colors.transparent)
+    );
     return GetMaterialApp(
       title: '字里行间',
       theme: ThemeData(

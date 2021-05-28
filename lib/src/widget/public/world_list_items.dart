@@ -7,7 +7,9 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_between_the_lines/src/core/theme/theme_main.dart';
+import 'package:flutter_between_the_lines/src/service/router/app_router_map_values.dart';
 import 'package:flutter_between_the_lines/src/service/utils/style_kits.dart';
+import 'package:get/get.dart';
 
 class WorldListItems extends StatelessWidget {
   Container _buildListItemHeader(BuildContext context) {
@@ -27,6 +29,9 @@ class WorldListItems extends StatelessWidget {
     return GestureDetector(
       onTap: () {
         print('头像部分被点击了！');
+        Get.toNamed(AppRouterMapValues.UserProfilePage, parameters: {
+          "userid": "_7948wd4g15ryy58"
+        });
       },
       child: Row(
         children: [

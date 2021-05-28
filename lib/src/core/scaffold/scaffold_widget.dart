@@ -11,6 +11,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_between_the_lines/src/pages/favorite/favorite_view.dart';
 import 'package:flutter_between_the_lines/src/pages/home/home_view.dart';
 import 'package:flutter_between_the_lines/src/pages/search/search_view.dart';
+import 'package:flutter_between_the_lines/src/service/utils/style_kits.dart';
 import '../../pages/user/user_view.dart';
 
 class ScaffoldMainClass extends StatefulWidget {
@@ -57,18 +58,19 @@ class _ScaffoldMainClassState extends State<ScaffoldMainClass>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: TabBarView(
-        children: this.tabBarViewList,
-        controller: this.tabController,
-      ),
-      bottomNavigationBar: Material(
-          color: Theme.of(context).primaryColor,
-          child: TabBar(
-            indicatorColor: Colors.transparent,
-            tabs: this.tabBarList,
-            controller: this.tabController,
-            labelColor: Colors.white,
-          )),
+        body: TabBarView(
+          children: this.tabBarViewList,
+          controller: this.tabController,
+        ),
+        bottomNavigationBar: Material(
+            color: Theme.of(context).primaryColor,
+            child: TabBar(
+              indicatorColor: Colors.transparent,
+              tabs: this.tabBarList,
+              controller: this.tabController,
+              labelColor: Colors.white,
+            )
+        )
     );
   }
 }
