@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_between_the_lines/src/core/theme/theme_main.dart';
 import 'package:flutter_between_the_lines/src/service/helper/evaluation_introduction.dart';
 import 'package:flutter_between_the_lines/src/service/utils/style_kits.dart';
@@ -13,6 +14,8 @@ import 'user_profile_state.dart';
 class UserProfilePage extends StatelessWidget {
   final UserProfileLogic logic = Get.put(UserProfileLogic());
   final UserProfileState state = Get.find<UserProfileLogic>().state;
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -51,7 +54,7 @@ class UserProfilePage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'HELENA WINTER',
+                '南风微凉',
                 style: TextStyle(
                     fontSize: StyleKits.px(30),
                     fontWeight: FontWeight.bold,
@@ -61,7 +64,7 @@ class UserProfilePage extends StatelessWidget {
                 height: StyleKits.px(12.5),
               ),
               Text(
-                'UI/UX and Product Designer',
+                '山东理工大学计算机科学与技术学院',
                 style: TextStyle(
                     fontSize: StyleKits.px(12.5), color: Colors.white),
               )
@@ -71,9 +74,9 @@ class UserProfilePage extends StatelessWidget {
 
     Widget _buildProfileEvaluationCard() => EvaluationCard(
           evaluationData: [
-            EvaluationIntroduction(content: '125', introduction: 'Posts'),
-            EvaluationIntroduction(content: '250', introduction: 'Followers'),
-            EvaluationIntroduction(content: '1256', introduction: 'Following'),
+            EvaluationIntroduction(content: '125', introduction: '作品'),
+            EvaluationIntroduction(content: '250', introduction: '粉丝'),
+            EvaluationIntroduction(content: '1256', introduction: 'TA的关注'),
           ],
           backgroundColor: Colors.transparent,
           titleColor: Colors.white,
@@ -95,7 +98,7 @@ class UserProfilePage extends StatelessWidget {
                 height: StyleKits.px(45),
                 child: Center(
                   child: Text(
-                    'Follow',
+                    '关注TA',
                     style: TextStyle(
                         color: Colors.white, fontSize: StyleKits.px(16)),
                   ),
@@ -142,7 +145,8 @@ class UserProfilePage extends StatelessWidget {
       decoration: BoxDecoration(
           image: DecorationImage(
               image: NetworkImage(
-                'https://uploadfile.bizhizu.cn/up/25/8a/a2/258aa2ed6193f0ed78f78b490f476e43.jpg',
+                'https://c-ssl.duitang.com/uploads/item/201809/30/20180930212927_huohk.thumb.1000_0.jpg',
+                //'https://uploadfile.bizhizu.cn/up/25/8a/a2/258aa2ed6193f0ed78f78b490f476e43.jpg',
               ),
               fit: BoxFit.cover)),
       child: CustomScrollView(

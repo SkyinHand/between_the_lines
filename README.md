@@ -70,3 +70,21 @@
 
 
 <img src="./imgShow/daomeng_current.jpg" alt="APP" style="zoom: 33%;" />
+
+
+
+
+
+## 用户详情页（简洁可粉）
+
+
+
+### 原设计图
+
+![设计图](./imgShow/userdetail.png)
+
+
+
+### APP中组件
+
+<img src="./imgShow/app_userdetail.jpg" alt="APP组件" style="zoom:33%;" />

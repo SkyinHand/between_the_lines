@@ -255,14 +255,19 @@ class WorldListItems extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        _buildListItemHeader(context),
-        _buildCenterWidget(),
-        _buildBottomToolBar(),
-        _buildGreatContainer(),
-        _buildBottomIntroduction()
-      ],
+    return Container(
+      child: Column(
+        children: [
+          _buildListItemHeader(context),
+          _buildCenterWidget(),
+          _buildBottomToolBar(),
+          _buildGreatContainer(),
+          _buildBottomIntroduction()
+        ],
+      ),
+      decoration: BoxDecoration(
+        color: Colors.white
+      ),
     );
   }
 }

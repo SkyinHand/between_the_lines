@@ -12,12 +12,14 @@ class MainClass extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     SystemChrome.setSystemUIOverlayStyle(
-        SystemUiOverlayStyle(statusBarColor: Colors.transparent)
+      SystemUiOverlayStyle(
+          statusBarColor: Colors.transparent,
+          systemNavigationBarColor: ThemeMain.systemBottomNavigationColor),
     );
     return GetMaterialApp(
       title: '字里行间',
       theme: ThemeData(
-          primaryColor: ThemeMain.colorTheme,
+        primaryColor: ThemeMain.colorTheme,
       ),
       getPages: AppRouter.page,
       home: ScaffoldMainClass(),

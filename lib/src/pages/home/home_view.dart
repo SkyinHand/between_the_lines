@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_between_the_lines/src/service/helper/BookIntroduction.dart';
-import 'package:flutter_between_the_lines/src/service/helper/recommend_introduction.dart';
 import 'package:flutter_between_the_lines/src/service/router/app_router_map_values.dart';
 import 'package:flutter_between_the_lines/src/service/utils/style_kits.dart';
 import 'package:flutter_between_the_lines/src/widget/public/builder_grid_view.dart';
+import 'package:flutter_between_the_lines/src/widget/public/icon_menu.dart';
+import 'package:flutter_between_the_lines/src/widget/public/icon_menu_item.dart';
 import 'package:flutter_between_the_lines/src/widget/public/world_list_items.dart';
 import 'package:flutter_between_the_lines/src/widget/video/video_show_card.dart';
 import '../../widget/public/awesome_recommend_gallery.dart';
-import '../../widget/public/awesome_tab_bar.dart';
-import '../../widget/public/horizontal_gallery.dart';
 import '../../widget/public/paper_tip.dart';
 import 'package:get/get.dart';
 
@@ -60,20 +58,35 @@ class HomePage extends StatelessWidget {
       );
     }
 
+    // IconMenu
+    Widget _buildIconMenu() {
+      return IconMenu(
+        iconList: [
+          IconMenuItem(iconLink: 'assets/img/school.png', title: '嗨助校园',),
+          IconMenuItem(iconLink: 'assets/img/daohang.png', title: '校园导航',),
+          IconMenuItem(iconLink: 'assets/img/jianzhi.png', title: '校园兼职',),
+          IconMenuItem(iconLink: 'assets/img/zixun.png', title: '校园资讯',),
+          IconMenuItem(iconLink: 'assets/img/huzhu.png', title: '校园互助',),
+          IconMenuItem(iconLink: 'assets/img/school.png', title: '嗨助校园',),
+          IconMenuItem(iconLink: 'assets/img/daohang.png', title: '校园导航',),
+          IconMenuItem(iconLink: 'assets/img/jianzhi.png', title: '校园兼职',),
+        ],
+      );
+    }
+
     return ListView(
       // padding: EdgeInsets.only(top: MediaQuery.of(context).padding.top),
       children: [
         PageHeaderTip(
-          title: 'Discover',
-          subtitle: 'find your favorite movie!',
+          title: '嗨助校园',
+          subtitle: '送人玫瑰，手留余香',
           child: Image.network(
               'https://c-ssl.duitang.com/uploads/item/201903/15/20190315004339_nWjPf.jpeg'
           ),
         ),
-
+        _buildIconMenu(),
         // _buildMenuVideoList()
         _buildWorldList()
-
       ],
     );
   }
